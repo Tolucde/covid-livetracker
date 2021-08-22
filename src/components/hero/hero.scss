@@ -36,6 +36,9 @@
         }
         .heroButton {
             display: flex;
+            @include smallScreen {
+                flex-direction: column;
+            }
             button {
                 height: 44px;
                 border-radius: 7px;
@@ -48,6 +51,9 @@
                 border: none;
                 color: white;
                 box-shadow: 0 2px 2px $primaryColor;
+                @include smallScreen {
+                    margin-bottom: 15px;
+                }
                 &:hover {
                     opacity: 0.8;
                     box-shadow: $shadow;

@@ -1,0 +1,73 @@
+@import '../../global.scss';
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: $primaryColor;
+    max-height: 714px;
+    height: 80vh;
+    justify-content: space-between;
+    padding: 0 10%;
+    color: white;
+    @include mobile {
+        padding: 2% 5%;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+    .heroText {
+        height: 295px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px 0;
+        width: 456px;
+        @include mobile {
+            width: 100%;
+        }
+        h2 {
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: 400;
+            letter-spacing: 0.01rem;
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .heroButton {
+            display: flex;
+            button {
+                height: 44px;
+                border-radius: 7px;
+                font-size: 16px;
+                padding: 0 15px;
+                width: 189px;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                border: none;
+                color: white;
+                box-shadow: 0 2px 2px $primaryColor;
+                &:hover {
+                    opacity: 0.8;
+                    box-shadow: $shadow;
+                }
+                &:nth-child(2) {
+                    background-color: $primaryColor;
+                    border: solid 2px white;
+                }
+                &:nth-child(1) {
+                    background-color: #eb0065;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .heroIcon {
+        img {
+            @include mobile {
+                width: 200px;
+            }
+        }
+    }
+}

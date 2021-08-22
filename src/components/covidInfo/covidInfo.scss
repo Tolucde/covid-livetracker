@@ -1,0 +1,16 @@
+@import '../../global.scss';
+.covidInfo {
+    height: fit-content;
+    background-color: $secondaryColor;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    .covidInfo__bottom {
+        .mapCountries {
+            display: flex;
+            justify-content: space-evenly;
+            display: flex;
+            width: 100%;
+        }
+    }
+}

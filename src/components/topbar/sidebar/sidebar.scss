@@ -1,0 +1,36 @@
+@import '../../../global.scss';
+.sidebar {
+    width: 270px;
+    position: fixed;
+    height: 100vh;
+    z-index: 550;
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    right: -350px;
+    background-color: $secondaryColor;
+    box-shadow: 4px 4px 8px 10px $primaryColor;
+    transition: all ease-in 0.6s;
+    ul {
+        li {
+            padding: 10px;
+            font-size: 28px;
+            font-weight: 700;
+            a {
+                color: $primaryColor;
+            }
+             :hover {
+                font-weight: 700;
+                text-shadow: 8px 10px 2px rgb(173, 171, 171);
+                transition: all linear 0.6;
+            }
+        }
+    }
+    &.sidebarOpen {
+        right: 0;
+    }
+    &.sidebarClose {
+        right: -350px;
+    }
+}

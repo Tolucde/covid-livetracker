@@ -1,0 +1,35 @@
+.selectedCountries>div>p {
+    letter-spacing: normal;
+}
+
+.selectedCountries {
+    padding-top: 15px;
+    border-top: solid 2px #dadbe7;
+    .countryCard {
+        display: flex;
+        height: 44px;
+        font-size: 14px;
+        justify-content: space-between;
+        background-color: #f2f3f7;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        align-items: center;
+        .country {
+            color: #2d2e39;
+            font-weight: 600;
+            flex: 1;
+            padding-left: 10px;
+        }
+        .number {
+            color: #6468a1;
+            width: 70px;
+        }
+        img {
+            width: 28px;
+            height: 28px;
+            background-size: cover;
+            border-radius: 50%;
+        }
+    }
+}

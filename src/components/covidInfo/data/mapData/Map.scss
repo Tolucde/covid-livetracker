@@ -1,0 +1,46 @@
+@import '../../../../global.scss';
+.mapData {
+    margin-bottom: 20px;
+    height: 530px;
+    padding: 15px;
+    border-radius: 10px !important;
+    margin-top: 16px;
+    box-shadow: 0 4 8px #bec1e032;
+    @include mobile {
+        margin-bottom: 30px;
+    }
+}
+
+.mapData .leaflet-container {
+    height: 500px;
+    border-radius: 10px !important;
+}
+
+.info__flag img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.info__name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.info__container {
+    width: 150px;
+}
+
+.info__flag {
+    height: 80px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.info__confirmed,
+.info__recovered,
+.info__deaths {
+    font-size: 16px;
+    margin-top: 5px;
+}

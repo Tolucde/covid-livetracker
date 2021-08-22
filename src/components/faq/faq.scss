@@ -1,0 +1,85 @@
+@import '../../global.scss';
+.faq {
+    height: fit-content;
+    padding: 4% 10%;
+    background-color: white;
+    .faq__heading {
+        color: $primaryColor;
+        font-size: 32px;
+        text-align: center;
+    }
+    .faq__container {
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .faq__list {
+            width: 288px;
+            margin-right: 35px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            @include mobile {
+                margin: 0;
+            }
+            .faq__list__items {
+                border: solid 2px #dadbe7;
+                display: flex;
+                border-radius: 5px;
+                color: #6468a1;
+                align-items: center;
+                font-size: 14px;
+                width: 268px;
+                justify-content: space-between;
+                padding: 0 15px;
+                height: 44px;
+                img {
+                    width: 4.5px;
+                    height: 7.88px;
+                }
+                &.faq__list__items:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .faq__right {
+            flex: 1;
+            .faq__questAns {
+                display: flex;
+                flex-direction: column;
+                .faq__questAns__questions {
+                    border-bottom: solid 1px #d8d8d8;
+                    display: flex;
+                    font-size: 16px;
+                    color: $primaryColor;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-weight: bold;
+                    padding: 15px 0;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        transition: all ease-in 3s;
+                    }
+                }
+                .faq__questAns__answers {
+                    border-bottom: solid 1px #d8d8d8;
+                    display: flex;
+                    padding: 15px 0;
+                    font-size: 15px;
+                    justify-content: space-between;
+                    line-height: 24px;
+                    color: #6468a1;
+                    align-items: center;
+                    // display: none;
+                    transition: all ease-in 3s;
+                    // &.answerOpen {
+                    //     display: flex;
+                    //     transition: all ease-in 3s;
+                    // }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+@import '../../global.scss';
+.footer {
+    background-color: $primaryColor;
+    color: white;
+    .footerSection {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 1px #fffbeb1f;
+        padding: 60px 60px;
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+        .attributionLogo {
+            width: 265px;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+            margin-bottom: 30px;
+            .footerLogo {
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+                img {
+                    width: 53px;
+                    margin-right: 10px;
+                    height: 53px;
+                }
+            }
+        }
+        .usefulLinks {
+            // padding: 0 30px;
+            width: 20%;
+            @include mobile {
+                width: 60%;
+                margin-bottom: 40px;
+            }
+            .lists {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+            ul {
+                margin-top: 15px;
+                li {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .contactLocation {
+            width: 20%;
+            @include mobile {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .contact {
+                .contact__heading {
+                    margin-bottom: 20px;
+                }
+                .tel,
+                .email {
+                    line-height: 27px;
+                    font-size: 14px;
+                }
+            }
+            .location {
+                .location__heading {
+                    margin: 20px 0 10px 0;
+                }
+            }
+        }
+        .socials {
+            @include mobile {
+                width: 100%;
+            }
+            width: 20%;
+            .socials__heading {
+                margin-bottom: 20px;
+            }
+            .socialsIcon {
+                display: flex;
+                .socialsIcon__div {
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    border: solid 1px #6468a1;
+                    display: flex;
+                    margin-right: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    .facebook {
+                        width: 11px;
+                        height: 18px;
+                        background-size: cover;
+                    }
+                    .youtube {
+                        width: 17px;
+                        background-size: cover;
+                        height: 12px;
+                    }
+                    .instagram {
+                        background-size: cover;
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .footerBottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        text-transform: uppercase;
+    }
+}

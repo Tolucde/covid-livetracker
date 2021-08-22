@@ -1,0 +1,79 @@
+@import '../../global.scss';
+.blog {
+    padding: 60px 0;
+    background-color: #f2f3f7;
+    .blog__heading {
+        color: $primaryColor !important;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 600;
+    }
+    .articles {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        .articlesInfo {
+            height: fit-content;
+            // margin: 0 auto;
+            border-radius: 15px 15px 10px 10px;
+            margin-bottom: 40px;
+            &:not(:last-child) {
+                margin-right: 40px;
+                @include mobile {
+                    margin: 0;
+                    margin-bottom: 40px;
+                }
+            }
+            .articlesInfo__image {
+                height: 174px;
+                width: 100%;
+                background-size: cover;
+            }
+            .articles__cardContent {
+                padding: 20px 20px 0 20px;
+                .articles__cardContent__heading {
+                    color: $primaryColor !important;
+                    font-weight: 600;
+                }
+                .articles__cardContent__text {
+                    color: #6468a1;
+                    margin-top: 10px;
+                    line-height: 24px;
+                }
+            }
+            .articles__cardActions {
+                padding: 0 20px;
+                margin: 25px 0;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                .readMore {
+                    color: $primaryColor !important;
+                }
+            }
+        }
+    }
+    .viewAll {
+        display: flex;
+        background-color: #eb0065 !important;
+        width: fit-content;
+        color: white !important;
+        width: 133px;
+        justify-content: space-around;
+        height: 44px;
+        border-radius: 5px;
+        margin: 0 auto;
+        align-items: center;
+        .viewAll__text {
+            font-weight: 600;
+            text-transform: capitalize !important;
+        }
+        img {
+            width: 7px;
+            height: 14px;
+            background-size: cover;
+            color: white;
+        }
+    }
+}

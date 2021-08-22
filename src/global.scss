@@ -1,0 +1,8 @@
+$primaryColor: #262c7c;
+$secondaryColor: #f2f3f7;
+$shadow: 0 4px 8px #bec1e034;
+@mixin mobile {
+    @media (max-width: 700px) {
+        @content;
+    }
+}

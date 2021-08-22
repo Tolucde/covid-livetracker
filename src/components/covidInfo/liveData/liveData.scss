@@ -1,0 +1,74 @@
+@import '../../../global.scss';
+.liveDataComp {
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0 4px 8px #bec1e0 !important;
+    margin: 0 5%;
+    transform: translateY(-50%);
+    width: 90%;
+    @media (max-width: 940px) {
+        height: fit-content;
+        transform: translateY(0);
+        margin-top: 40px;
+        padding: 10px 0;
+    }
+    .liveData {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        padding: 0 5%;
+        height: 100%;
+        width: 100%;
+        .liveDataInfo {
+            background-color: transparent !important;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            color: $primaryColor;
+            height: 157px;
+            &.overview {
+                .liveDataInfo__media {
+                    padding: 0 50px 0 0;
+                    width: 50px;
+                }
+            }
+            @include mobile {
+                align-items: center;
+                padding: 15px 20px;
+                // width: 100%;
+                height: fit-content;
+            }
+            .liveDataInfo__media {
+                width: 50px;
+                height: 50px;
+            }
+            .liveDataInfo__figures {
+                padding: 0 0 0 10px;
+                .figures__headings {
+                    line-height: 22px;
+                    margin-top: 10px;
+                    font-weight: 500;
+                }
+                .global {
+                    font-weight: 500;
+                    select {
+                        border: none;
+                        font-size: 24px;
+                        font-weight: 500;
+                        width: 80%;
+                        color: $primaryColor;
+                        option {
+                            font-size: 19px;
+                            background-color: #bec1e01e;
+                        }
+                    }
+                    img {
+                        height: 7px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

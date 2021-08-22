@@ -1,0 +1,101 @@
+@import '../../global.scss';
+.header {
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+    width: 100%;
+    z-index: 900;
+    color: white;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.13);
+    height: 88px;
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            margin-right: 10px;
+            width: 50px;
+        }
+        figcaption {
+            font-weight: 600;
+        }
+    }
+    .nav {
+        width: 60%;
+        ul {
+            list-style: none;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            @include mobile {
+                display: none;
+            }
+            li {
+                a {
+                    font-size: 14px;
+                    color: white;
+                }
+            }
+        }
+    }
+    .right {
+        display: none;
+        z-index: 900;
+        position: fixed;
+        right: 40px;
+        cursor: pointer;
+        @include mobile {
+            display: block;
+        }
+        .hamburger {
+            width: 32px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            span {
+                width: 100%;
+                height: 4px;
+                background-color: $secondaryColor;
+                transform-origin: left;
+                transition: all 0.6s ease;
+                border-bottom: 2px solid $primaryColor;
+            }
+        }
+    }
+    &.active {
+        background-color: $secondaryColor;
+        color: $primaryColor;
+        transition: all ease-in 0.6s;
+        border-bottom: double 5px $primaryColor;
+        .line1 {
+            transform: rotate(45deg);
+            background-color: $primaryColor !important;
+        }
+        .line2 {
+            opacity: 0;
+        }
+        .line3 {
+            transform: rotate(-45deg);
+            background-color: $primaryColor !important;
+        }
+    }
+}
+
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 510;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.274);
+    display: none;
+    transition: all linear 0.9s;
+    &.backdropOpen {
+        display: block;
+        transition: all ease-in 1s;
+    }
+}
